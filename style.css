@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar cố định đè lên trên */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #2afd00;
+}
+
+/* Background cố định phủ kín toàn trang */
+.bg {
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 40px;
+}
+
+/* Khung nội dung mờ cho About và Contact */
+.about-container,
+.contact-container {
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  text-align: center;
+}
+
+/* Font Gradient Tiêu đề */
+h1 {
+  background-image: linear-gradient(180deg, #2afd00, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.des {
+  text-align: left;
+  margin-top: 15px;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Card hiển thị link và thumbnail Studio Scratch */
+.studio-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-top: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào thẻ card */
+.studio-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #2afd00;
+}
+
+/* Kiểu dáng cho Thumbnail */
+.studio-thumb {
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Thông tin text bên cạnh thumbnail */
+.studio-info {
+  text-align: left;
+}
+
+.studio-info h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.studio-info span {
+  color: #2afd00;
+  font-size: 16px;
+  font-weight: bold;
+}
